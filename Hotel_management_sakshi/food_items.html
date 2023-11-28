@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Menu Item</title>
+</head>
+<body>
+    <h2>Add Menu Item</h2>
+    <form method="post" action="food_items_into_db.php">
+        <label for="item_name">Item Name:</label><br>
+        <input type="text" id="item_name" name="item_name" required><br><br>
+        
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description"></textarea><br><br>
+        
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price" step="0.01" required><br><br>
+        
+        <input type="submit" value="Add Item">
+    </form>
+</body>
+</html>

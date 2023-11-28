@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Type Selection</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 80%;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .admin-btn {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .student-btn {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .admin-btn:hover,
+        .student-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Select User Type</h1>
+  
+        <div class="buttons">
+            <button class="admin-btn"><a href="Admin.php">Admin</a></button>
+            <button class="student-btn"><a href="customer.php">Customer</a></button>
+        </div>
+    
+</div>
+
+</body>
+</html>

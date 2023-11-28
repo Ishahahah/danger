@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place Order</title>
+</head>
+<body>
+    <h2>Place Order</h2>
+    <form action="process_order.php" method="post">
+        <label for="order_id">Order ID:</label><br>
+        <input type="text" id="order_id" name="order_id" required><br><br>
+        
+        <label for="customer_name">Customer Name:</label><br>
+        <input type="text" id="customer_name" name="customer_name" required><br><br>
+        
+        <label for="item_name">Item Name:</label><br>
+        <input type="text" id="item_name" name="item_name" required><br><br>
+        
+        <label for="quantity">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+        
+        
+        <input type="submit" value="Place Order">
+    </form>
+</body>
+</html>

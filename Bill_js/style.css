@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+
+#form{
+    border: 2px solid black;
+    padding: 40px;
+   
+}
+#submit{
+    height: 30px;
+    width: 80px;
+}

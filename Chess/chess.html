@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chessboard Resizing</title>
+<style>
+body {
+  text-align: center;
+}
+
+.cell {
+  height: 30px;
+  width: 30px;
+  border: 1.5px solid grey;
+  border-style: inset;
+}
+
+.blackcell {
+  background-color: black;
+}
+
+.whitecell {
+  background-color: white;
+}
+</style>
+</head>
+
+<body>
+<h1>Chessboard Resizing</h1>
+<input type="number" id="boardSize" min="1" max="100" value="8" />
+<button onclick="resizeBoard()">Resize Board</button>
+<br><br>
+
+<div id="chessboard"></div>
+
+<script>
+function resizeBoard() {
+  var boardSize = parseInt(document.getElementById('boardSize').value);
+  var chessboard = document.getElementById('chessboard');
+  chessboard.innerHTML = '';
+
+  for (var i = 0; i < boardSize; i++) {
+    var tr = document.createElement('tr');
+    for (var j = 0; j < boardSize; j++) {
+      var td = document.createElement('td');
+
+      if ((i + j) % 2 == 0) {
+        td.setAttribute('class', 'cell whitecell');
+      } else {
+        td.setAttribute('class', 'cell blackcell');
+      }
+
+      tr.appendChild(td);
+    }
+    chessboard.appendChild(tr);
+  }
+
+  chessboard.style.width = (boardSize * 30) + 'px';
+}
+
+resizeBoard();
+</script>
+</body>
+</html>

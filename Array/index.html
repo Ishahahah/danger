@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Array Operation</title>
+ 
+    /* Your CSS styles */
+    <style>
+      form {
+        border: 2px solid black;
+        width: 300px;
+        padding: 20px;
+      }
+      #btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 50px;
+      }
+      .btn {
+        width: 80px;
+        height: 30px;
+        color: aliceblue;
+        background-color: cadetblue;
+        border: 2px solid black;
+        border-radius: 2px;
+      }
+      .btn:hover {
+        background-color: #2980b9;
+      }
+      .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 80%;
+      margin: 20px auto;
+    }
+    #f1 {
+      width: 30%;
+    }
+    #f2 {
+      width: 30%;
+    }
+    </style>
+ 
+</head>
+<body>
+  <div class="container">
+    <!-- First Form -->
+    <form id="f1">
+      <label for="number">Enter Number:</label>
+      <input type="number" name="number" id="number" />
+      <br /><br />
+      <div id="btn1">
+        <input
+          type="button"
+          value="Add"
+          name="Add"
+          class="btn"
+          onclick="addelement()"
+        />
+        <input
+          type="button"
+          value="Sort"
+          name="Sort"
+          class="btn"
+          onclick="sortelements()"
+        />
+        <input
+          type="button"
+          value="Show"
+          name="Show"
+          class="btn"
+          onclick="showArray()"
+        />
+      </div>
+      <br /><br />
+    </form>
+    <div id="arrayDisplay"></div>
+
+    <!-- Second Form -->
+    <form id="f2">
+      <label for="text">Enter named entities :</label>
+      <input type="text" name="text" id="text" />
+      <br /><br />
+      <div id="btn2">
+        <input
+          type="button"
+          value="Add"
+          name="Add"
+          class="btn"
+          onclick="addtext()"
+        />
+        <input
+          type="button"
+          value="Show"
+          name="Show"
+          class="btn"
+          onclick="showtext()"
+        />
+      </div>
+      <br /><br />
+    </form>
+    <div id="dis"></div>
+  </div>
+
+  <script>
+    let array = [];
+
+    function addelement() {
+      let element = document.getElementById("number").value;
+      array.push(element);
+      alert(element + " added successfully");
+      document.getElementById("number").value = ""; // Clear input field
+    }
+
+    function display() {
+      for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+      }
+    }
+
+    function showArray() {
+      let displayDiv = document.getElementById("arrayDisplay");
+      displayDiv.innerHTML = array.join(",");
+    }
+
+    function sortelements() {
+      let l = array.length;
+      for (let i = 0; i < l - 1; i++) {
+        for (let j = 0; j < l - i - 1; j++) {
+          if (array[j] > array[j + 1]) {
+            let temp = array[j];
+            array[j] = array[j + 1];
+            array[j + 1] = temp;
+          }
+        }
+      }
+      showArray(); // Display sorted array
+    }
+
+    let arr = [];
+
+    function addtext() {
+      let text = document.getElementById('text').value;
+      arr.push(text);
+      alert(text + " is added");
+      document.getElementById("text").value = ""; // Clear input field
+    }
+
+    function showtext() {
+      let store = document.getElementById('dis');
+      store.innerHTML = arr.join(',');
+    }
+  </script>
+</body>
+</html>

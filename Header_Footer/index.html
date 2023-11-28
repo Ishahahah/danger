@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Page with Structured Sections</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    main {
+      margin: 20px;
+    }
+
+    section {
+      display: flex;
+    }
+
+    article, aside {
+      flex-basis: 50%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Main Section</h2>
+      <article style="background-color: #f9f9f9;">
+        <h3>Article</h3>
+        <p>This is the main content of the article. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod ipsum vitae odio accumsan, sit amet consequat justo pharetra.</p>
+      </article>
+      <aside style="background-color: #f2f2f2;">
+        <h3>Aside</h3>
+        <p>This is some additional content. Duis consectetur mi vitae ligula cursus viverra. In hac habitasse platea dictumst. Aliquam erat volutpat.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>Footer - &copy; 2023</p>
+  </footer>
+
+</body>
+</html>

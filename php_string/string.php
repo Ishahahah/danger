@@ -20,3 +20,4 @@ echo "String in UPPERCASE: " . transformString($string, 'UC') . "<br>";
 echo "String in lowercase: " . transformString($string, 'LC') . "<br>";
 echo "String with First Character in Uppercase: " . transformString($string, 'FCUC') . "<br>";
 ?>
+
